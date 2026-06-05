@@ -9,4 +9,5 @@ user: process.env.DB_USER,
 password: process.env.DB_PASSWORD
 };
 
+console.log(process.env.DB_DATABASE);
 export default DBConfig; 

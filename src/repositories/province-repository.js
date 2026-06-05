@@ -3,6 +3,7 @@ import DBConfig from "../configs/db-config.js";
 
 export default class ProvinceRepository {
 
+    //Aca traigo a todas las provincias
    getAllAsync = async () => {
 
        let returnArray = [];
@@ -12,11 +13,8 @@ export default class ProvinceRepository {
        try {
 
            await client.connect();
-
-           const sql = "SELECT * FROM provinces";
-
+           const sql = "SELECT * FROM provincias";
            const result = await client.query(sql);
-
            returnArray = result.rows;
 
        } catch (error) {
@@ -27,4 +25,31 @@ export default class ProvinceRepository {
 
        return returnArray;
    }
+
+
+   //Aca nada mas traigo la provincia por ID
+   getByIdAsync = async (id) => {
+      let returnEntity = null;
+
+    const client = new Client(DBConfig);
+   
+    try {
+
+        await client.connect();
+        const sql = "SELECT * FROM provincias WHERE id = $1";
+        const values = [id];
+        const result = await client.query(sql, values);
+        if (result.rows.length > 0) {
+            returnEntity = result.rows[0];
+        }
+
+    } catch (error) {
+        console.log(error);
+    } finally {
+        await client.end();
+    }
+
+    return returnEntity;
 }
+}
+
