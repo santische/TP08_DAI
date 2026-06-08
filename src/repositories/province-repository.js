@@ -51,5 +51,39 @@ export default class ProvinceRepository {
 
     return returnEntity;
 }
+
+createAsync = async (province) => {
+
+    const client = new Client(DBConfig);
+
+    try {
+
+        await client.connect();
+
+        const sql = `
+            INSERT INTO provincias
+            (nombre, nombrecompleto, latitud, longitud, displayorder)
+            VALUES ($1, $2, $3, $4, $5)
+        `;
+
+        const values = [
+            province.name,
+            province.full_name,
+            province.latitude,
+            province.longitude,
+            province.display_order
+        ];
+
+        await client.query(sql, values);
+
+        return province;
+
+    } catch (error) {
+    console.log(error);
+    throw error;
+} finally {
+        await client.end();
+    }
+}
 }
 

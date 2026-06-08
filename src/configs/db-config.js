@@ -1,13 +1,8 @@
-import 'dotenv/config';
-import {Client} from "pg";
-
-const DBConfig = {
-host: process.env.DB_HOST,
-port: process.env.DB_PORT,
-database: process.env.DB_DATABASE,
-user: process.env.DB_USER,
-password: process.env.DB_PASSWORD
-};
-
-console.log(process.env.DB_DATABASE);
-export default DBConfig; 
+const config={
+    host:"localhost",
+    database:"TP08-Provincias",
+    user:"postgres",
+    password:"root",
+    port:5432
+}
+export default config

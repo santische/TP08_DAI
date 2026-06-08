@@ -11,4 +11,8 @@ export default class ProvinceService {
     getByIdAsync = async (id) => {
         return await this.repository.getByIdAsync(id);
     }
+
+    createAsync = async (province) => {
+    return await this.repository.createAsync(province);
+}
 }
