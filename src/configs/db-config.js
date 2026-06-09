@@ -5,4 +5,4 @@ const config={
     password:"root",
     port:5432
 }
-export default config
+export default config;

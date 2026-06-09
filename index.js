@@ -1,28 +1,31 @@
-import express  from "express"; 
-import cors     from "cors"; 
-import ProvinceRouter from "./src/controllers/province-controller.js" 
+import "dotenv/config"; 
+import express from "express";
+import cors    from "cors";
+import ProvinceRouter from "./src/controllers/province-controller.js";
 
-const app  = express(); 
+const app  = express();
+
+// El puerto viene del .env si existe, sino usa 3000 como valor por defecto.
 const port = 3001;
 
-// Agrego los Middlewares 
-app.use(cors());         // Middleware de CORS. 
-app.use(express.json()); // Middleware para parsear y comprender JSON. 
+// ── Middlewares ───────────────────────────────────────────────────────────────
+// Los middlewares son funciones que se ejecutan ANTES de que llegue el request
+// a tu endpoint. Se aplican a todos los requests.
 
-// 
-// Endpoints (todos los Routers) 
-// 
+// cors() permite que otros dominios (ej: tu frontend) puedan llamar a esta API.
+// Sin esto, el browser bloquea los requests que vienen de otro origen.
+app.use(cors());
+
+// express.json() lee el body del request y lo convierte en un objeto JavaScript.
+// Sin esto, req.body en el controller sería undefined.
+app.use(express.json());
+
+// ── Routers ───────────────────────────────────────────────────────────────────
+// Cada Router agrupa los endpoints de una entidad.
+// Todo lo que llegue a /api/province lo maneja el ProvinceRouter.
 app.use("/api/province", ProvinceRouter);
-app.get('/test', (req, res) => {
-    res.send('OK');
+
+// ── Inicio del servidor ───────────────────────────────────────────────────────
+app.listen(port, () => {
+    console.log(`Servidor corriendo en http://localhost:${port}`);
 });
-//
-// Inicio el Server y lo pongo a escuchar. 
-// 
-console.log("Llego hasta aca");
-app.listen(port, () => {     
-    console.log(`Example app listening on port ${port}`) 
-})
-
-
-
