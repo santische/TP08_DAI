@@ -1,18 +1,9 @@
 import { Client } from "pg";
 import DBConfig from "../configs/db-config.js";
 import LogHelper from "../helpers/log-helper.js";
-
-// El repository es el único lugar de la aplicación que habla con la base de datos.
-// Nadie más hace consultas SQL. Si mañana cambiás la base, solo tocás este archivo.
-// Cada método abre su propia conexión, hace la consulta, y la cierra en el finally.
-// El "finally" se ejecuta SIEMPRE, haya error o no, para asegurarnos de cerrar la conexión.
-
 export default class ProvinceRepository {
 
-    // ─────────────────────────────────────────────
-    // Trae todas las provincias de la base de datos.
-    // Devuelve un array (puede estar vacío si no hay filas).
-    // ─────────────────────────────────────────────
+
     getAllAsync = async () => {
         let returnArray = [];
         const client = new Client(DBConfig);
@@ -33,10 +24,6 @@ export default class ProvinceRepository {
         return returnArray;
     }
 
-    // ─────────────────────────────────────────────
-    // Trae una sola provincia por su id.
-    // Devuelve el objeto si lo encontró, o null si no existe.
-    // ─────────────────────────────────────────────
     getByIdAsync = async (id) => {
         let returnEntity = null;
         const client = new Client(DBConfig);
@@ -61,10 +48,6 @@ export default class ProvinceRepository {
         return returnEntity;
     }
 
-    // ─────────────────────────────────────────────
-    // Inserta una nueva provincia en la base de datos.
-    // Devuelve la fila insertada con el id generado por la base.
-    // ─────────────────────────────────────────────
     createAsync = async (province) => {
         const client = new Client(DBConfig);
 
@@ -94,10 +77,6 @@ export default class ProvinceRepository {
         }
     }
 
-    // ─────────────────────────────────────────────
-    // Actualiza una provincia existente.
-    // Devuelve la fila actualizada, o null si no encontró el id.
-    // ─────────────────────────────────────────────
     updateAsync = async (province) => {
         const client = new Client(DBConfig);
 
@@ -138,10 +117,6 @@ export default class ProvinceRepository {
         }
     }
 
-    // ─────────────────────────────────────────────
-    // Elimina una provincia por su id.
-    // Devuelve true si la eliminó, o null si no encontró el id.
-    // ─────────────────────────────────────────────
     deleteAsync = async (id) => {
         const client = new Client(DBConfig);
 

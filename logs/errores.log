@@ -1,0 +1,9 @@
+2026-06-10T16:43:47.675Z: error - el valor nulo en la columna «id» de la relación «provincias» viola la restricción de no nulo
+Stack Trace:
+error: el valor nulo en la columna «id» de la relación «provincias» viola la restricción de no nulo
+    at C:\Users\devandroid\TP08_DAI\node_modules\pg\lib\client.js:646:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async ProvinceRepository.createAsync (file:///C:/Users/devandroid/TP08_DAI/src/repositories/province-repository.js:86:28)
+    at async ProvinceService.createAsync (file:///C:/Users/devandroid/TP08_DAI/src/services/province-service.js:40:16)
+    at async file:///C:/Users/devandroid/TP08_DAI/src/controllers/province-controller.js:51:9
+
