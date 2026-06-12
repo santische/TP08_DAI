@@ -20,9 +20,6 @@ export default class ProvinceService {
 
 
     createAsync = async (province) => {
-        // Validamos ANTES de ir a la base de datos.
-        // Si algo está mal, validateProvince lanza un Error y cortamos acá.
-        // Ese error sube al controller sin pasar por el repository.
         ValidacionesHelper.validateProvince(province);
 
         return await this.repository.createAsync(province);

@@ -1,35 +1,22 @@
 import fs from "fs";
 
-// fs = file system 
-// Es nativo de Node, no hay que instalarlo con npm. Te permite cosas como:
-
-//Leer archivos
-//Crear archivos
-//Escribir en archivos
-//Crear carpetas
 
 // LogHelper se encarga de registrar errores en dos lugares posibles:
 //   1. Un archivo de texto en disco (para revisar después)
 //   2. La consola (para ver en tiempo real mientras desarrollás)
 //
-// Cuál de los dos está activo se controla desde el .env,
-// así podés activar/desactivar sin tocar el código.
 
 class LogHelper {
 
     constructor() {
-        // Leemos la configuración del .env
+       
         this.filePath            = process.env.LOG_FILE_PATH;            // carpeta donde se guarda el archivo
         this.fileName            = process.env.LOG_FILE_NAME;            // nombre del archivo
         this.logToFileEnabled    = process.env.LOG_TO_FILE_ENABLED    === "true"; // convierte "true"/"false" a booleano
         this.logToConsoleEnabled = process.env.LOG_TO_CONSOLE_ENABLED === "true";
     }
-
-    // ─────────────────────────────────────────────
-    // Recibe un objeto Error y lo registra según la configuración.
+    
     // Se llama desde los catch del repository:
-    //   catch(error) { LogHelper.logError(error); throw error; }
-    // ─────────────────────────────────────────────
     logError = (errorObject) => {
 
         // Armamos el texto que vamos a guardar/mostrar.

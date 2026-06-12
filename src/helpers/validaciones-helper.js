@@ -30,11 +30,12 @@ class ValidacionesHelper {
             throw new Error("La latitud debe ser un número.");
         }
 
-        // ── longitude ─────────────────────────────────────────
+        // longitude 
         if (province.longitude === undefined || province.longitude === null) {
             throw new Error("La longitud es obligatoria.");
         }
-
+        
+        
         if (isNaN(province.longitude)) {
             throw new Error("La longitud debe ser un número.");
         }

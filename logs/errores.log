@@ -7,3 +7,30 @@ error: el valor nulo en la columna «id» de la relación «provincias» viola l
     at async ProvinceService.createAsync (file:///C:/Users/devandroid/TP08_DAI/src/services/province-service.js:40:16)
     at async file:///C:/Users/devandroid/TP08_DAI/src/controllers/province-controller.js:51:9
 
+2026-06-12T11:14:48.140Z: error - el valor nulo en la columna «id» de la relación «provincias» viola la restricción de no nulo
+Stack Trace:
+error: el valor nulo en la columna «id» de la relación «provincias» viola la restricción de no nulo
+    at C:\Users\devandroid\TP08_DAI\node_modules\pg\lib\client.js:646:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async ProvinceRepository.createAsync (file:///C:/Users/devandroid/TP08_DAI/src/repositories/province-repository.js:69:28)
+    at async ProvinceService.createAsync (file:///C:/Users/devandroid/TP08_DAI/src/services/province-service.js:28:16)
+    at async file:///C:/Users/devandroid/TP08_DAI/src/controllers/province-controller.js:32:9
+
+2026-06-12T11:16:04.684Z: error - el valor nulo en la columna «id» de la relación «provincias» viola la restricción de no nulo
+Stack Trace:
+error: el valor nulo en la columna «id» de la relación «provincias» viola la restricción de no nulo
+    at C:\Users\devandroid\TP08_DAI\node_modules\pg\lib\client.js:646:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async ProvinceRepository.createAsync (file:///C:/Users/devandroid/TP08_DAI/src/repositories/province-repository.js:69:28)
+    at async ProvinceService.createAsync (file:///C:/Users/devandroid/TP08_DAI/src/services/province-service.js:28:16)
+    at async file:///C:/Users/devandroid/TP08_DAI/src/controllers/province-controller.js:32:9
+
+2026-06-12T11:36:22.223Z: error - la sintaxis de entrada no es válida para tipo integer: «abc»
+Stack Trace:
+error: la sintaxis de entrada no es válida para tipo integer: «abc»
+    at C:\Users\devandroid\TP08_DAI\node_modules\pg\lib\client.js:646:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async ProvinceRepository.getByIdAsync (file:///C:/Users/devandroid/TP08_DAI/src/repositories/province-repository.js:35:28)
+    at async ProvinceService.getByIdAsync (file:///C:/Users/devandroid/TP08_DAI/src/services/province-service.js:18:16)
+    at async file:///C:/Users/devandroid/TP08_DAI/src/controllers/province-controller.js:18:22
+
