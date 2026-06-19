@@ -230,3 +230,25 @@ Provincia eliminada correctamente.
 ```
 Provincia no encontrada.
 ```
+
+
+INSERTS: INSERT INTO public.provincias (nombre, nombrecompleto, latitud, longitud, displayorder) VALUES('Buenos Aires', 'Provincia de Buenos Aires', -36.6769415, -60.5588319, 1);
+INSERT INTO public.provincias (nombre, nombrecompleto, latitud, longitud, displayorder) VALUES('CABA', 'Ciudad Autónoma de Buenos Aires', -34.6144009, -58.4458809, 2);
+INSERT INTO public.provincias (nombre, nombrecompleto, latitud, longitud, displayorder) VALUES('Catamarca', 'Provincia de Catamarca', -28.4715867, -65.7877209, 3);
+INSERT INTO public.provincias (nombre, nombrecompleto, latitud, longitud, displayorder) VALUES('Chaco', 'Provincia del Chaco', -27.4257875, -59.0243784, 4);
+INSERT INTO public.provincias (nombre, nombrecompleto, latitud, longitud, displayorder) VALUES('Chubut', 'Provincia del Chubut', -43.2934688, -65.1114650, 5);
+INSERT INTO public.provincias (nombre, nombrecompleto, latitud, longitud, displayorder) VALUES('Córdoba', 'Provincia de Córdoba', -31.4166654, -64.1833319, 6);
+INSERT INTO public.provincias (nombre, nombrecompleto, latitud, longitud, displayorder) VALUES('Corrientes', 'Provincia de Corrientes', -27.4692131, -58.8306349, 7);
+INSERT INTO public.provincias (nombre, nombrecompleto, latitud, longitud, displayorder) VALUES('Entre Ríos', 'Provincia de Entre Ríos', -31.7746399, -60.4956679, 8);
+INSERT INTO public.provincias (nombre, nombrecompleto, latitud, longitud, displayorder) VALUES('Formosa', 'Provincia de Formosa', -26.1849718, -58.1730887, 9);
+INSERT INTO public.provincias (nombre, nombrecompleto, latitud, longitud, displayorder) VALUES('Jujuy', 'Provincia de Jujuy', -24.1857724, -65.2994703, 10);
+INSERT INTO public.provincias (nombre, nombrecompleto, latitud, longitud, displayorder) VALUES('La Pampa', 'Provincia de La Pampa', -37.1315471, -65.4466239, 11);
+INSERT INTO public.provincias (nombre, nombrecompleto, latitud, longitud, displayorder) VALUES('La Rioja', 'Provincia de La Rioja', -29.4130128, -66.8559932, 12);
+INSERT INTO public.provincias (nombre, nombrecompleto, latitud, longitud, displayorder) VALUES('Mendoza', 'Provincia de Mendoza', -34.9964963, -67.9986359, 13);
+INSERT INTO public.provincias (nombre, nombrecompleto, latitud, longitud, displayorder) VALUES('Misiones', 'Provincia de Misiones', -27.4266541, -55.9473344, 14);
+INSERT INTO public.provincias (nombre, nombrecompleto, latitud, longitud, displayorder) VALUES('Neuquén', 'Provincia del Neuquén', -38.9516952, -68.0591239, 15);
+INSERT INTO public.provincias (nombre, nombrecompleto, latitud, longitud, displayorder) VALUES('Río Negro', 'Provincia de Río Negro', -40.8261800, -63.0533400, 16);
+INSERT INTO public.provincias (nombre, nombrecompleto, latitud, longitud, displayorder) VALUES('Salta', 'Provincia de Salta', -24.7978799, -65.4150367, 17);
+INSERT INTO public.provincias (nombre, nombrecompleto, latitud, longitud, displayorder) VALUES('San Juan', 'Provincia de San Juan', -30.8653380, -68.8894150, 18);
+INSERT INTO public.provincias (nombre, nombrecompleto, latitud, longitud, displayorder) VALUES('San Luis', 'Provincia de San Luis', -33.2961690, -66.3291760, 19);
+INSERT INTO public.provincias (nombre, nombrecompleto, latitud, longitud, displayorder) VALUES('Santa Cruz', 'Provincia de Santa Cruz', -51.6352880, -69.2474640, 20);
