@@ -34,3 +34,12 @@ error: la sintaxis de entrada no es válida para tipo integer: «abc»
     at async ProvinceService.getByIdAsync (file:///C:/Users/devandroid/TP08_DAI/src/services/province-service.js:18:16)
     at async file:///C:/Users/devandroid/TP08_DAI/src/controllers/province-controller.js:18:22
 
+2026-06-19T11:16:42.438Z: error - la sintaxis de entrada no es válida para tipo integer: «abd»
+Stack Trace:
+error: la sintaxis de entrada no es válida para tipo integer: «abd»
+    at C:\Users\devandroid\TP08_DAI\node_modules\pg\lib\client.js:646:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async ProvinceRepository.getByIdAsync (file:///C:/Users/devandroid/TP08_DAI/src/repositories/province-repository.js:35:28)
+    at async ProvinceService.getByIdAsync (file:///C:/Users/devandroid/TP08_DAI/src/services/province-service.js:18:16)
+    at async file:///C:/Users/devandroid/TP08_DAI/src/controllers/province-controller.js:18:22
+
