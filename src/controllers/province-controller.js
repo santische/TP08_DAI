@@ -6,8 +6,21 @@ const ProvinceRouter = Router();
 const service = new ProvinceService();
 
 
-ProvinceRouter.get("/", async (req, res) => {
-    const provinces = await service.getAllAsync();
+ProvinceRouter.get("/", async (req, res) => {   /*
+        #swagger.tags = ['Provincias']
+        #swagger.summary = 'Obtener todas las provincias'
+        #swagger.description = 'Retorna una lista con todas las provincias almacenadas en la base de datos.'
+
+        #swagger.responses[200] = {
+            description: 'Listado de provincias obtenido correctamente.',
+            schema: {
+                type: 'array',
+                items: {
+                    $ref: '#/definitions/Province'
+                }
+            }
+        }
+    */    const provinces = await service.getAllAsync();
     res.status(200).json(provinces);
 });
 

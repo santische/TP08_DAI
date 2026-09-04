@@ -43,3 +43,9 @@ error: la sintaxis de entrada no es válida para tipo integer: «abd»
     at async ProvinceService.getByIdAsync (file:///C:/Users/devandroid/TP08_DAI/src/services/province-service.js:18:16)
     at async file:///C:/Users/devandroid/TP08_DAI/src/controllers/province-controller.js:18:22
 
+2026-09-04T13:19:36.798Z: error - 
+Stack Trace:
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1134:18)
+    at afterConnectMultiple (node:net:1715:7)
+
